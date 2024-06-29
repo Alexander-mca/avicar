@@ -1,0 +1,15 @@
+<app-header>
+</app-header>
+<ul>
+    <li *ngFor="let viaje of viajes">
+            <a routerLink="/viaje/{{viaje.id}}">
+                <img [src]="viaje.imgUrl" [alt]="viaje.agencia"/>
+                <div class="content">
+                    <div class="name">
+                        {{viaje.agencia}}
+                    </div>
+                    <span class=""></span>
+                </div>
+            </a>
+    </li>
+</ul>
