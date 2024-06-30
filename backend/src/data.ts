@@ -1,7 +1,6 @@
-import { Usuario } from "./app/shared/models/usuario";
-import { Viaje } from "./app/shared/models/viaje";
 
-export const sample_usuarios: Usuario[] = [
+
+export const sample_usuarios: any[] = [
     {
         nombre: 'Carlos',
         user : 'Carlos12',
@@ -34,7 +33,7 @@ export const sample_usuarios: Usuario[] = [
 
 ];
 
-export const sample_viajes: Viaje[] = [
+export const sample_viajes: any[] = [
     {
         id : '1',
         agencia : 'Montana',

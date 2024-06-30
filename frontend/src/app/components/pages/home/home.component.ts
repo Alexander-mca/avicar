@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { VueloService } from '../../../services/vuelo.service';
+import { VueloService } from '../../../services/viajes/vuelo.service';
 import { Viaje } from '../../../shared/models/viaje';
-import { RouterLink } from '@angular/router';
-import { NgFor } from '@angular/common';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { CommonModule, NgFor } from '@angular/common';
 import { HeaderComponent } from '../../partials/header/header.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, NgFor, HeaderComponent],
+  imports: [RouterLink, NgFor, HeaderComponent, CommonModule, RouterOutlet],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

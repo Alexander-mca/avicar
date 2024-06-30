@@ -1,22 +1,26 @@
 <div class="container">
 	<div class="screen">
 		<div class="screen__content">
-			<form class="login">
+			<form class="login" [formGroup]="loginForm" (ngSubmit)="submit()">
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="User name / Email">
+					<input type="text" class="login__input" 
+					formControlName="email"
+					placeholder="User name / Email" required>
 				</div>
 				<div class="login__field">
 					<i class="login__icon fas fa-lock"></i>
-					<input type="password" class="login__input" placeholder="Contraseña">
+					<input type="password" class="login__input" 
+					formControlName="password"
+					placeholder="Contraseña" required>
 				</div>
-				<button class="button login__submit">
+				<button class="button login__submit" type="submit">
 					<span class="button__text">Log In</span>
 					<i class="button__icon fas fa-chevron-right"></i>
 				</button>				
 			</form>
-			<div class="social-login">
-				<button routertLink="/">Regresar</button>
+			<div class="salir">
+				<a routerLink="/">Salir</a>
 			</div>
 		</div>
 		<div class="screen__background">
