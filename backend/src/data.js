@@ -1,6 +1,6 @@
 
 
-export const sample_usuarios: any[] = [
+const sample_usuarios = [
     {
         nombre: 'Carlos',
         user : 'Carlos12',
@@ -33,7 +33,7 @@ export const sample_usuarios: any[] = [
 
 ];
 
-export const sample_viajes: any[] = [
+const sample_viajes = [
     {
         id : '1',
         agencia : 'Montana',

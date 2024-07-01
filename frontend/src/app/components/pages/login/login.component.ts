@@ -4,6 +4,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import swal from 'sweetalert2';
+import { UsuarioService } from '../../../services/usuarios/usuario.service';
+import { environment } from '../../../../environments/environment.development';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +17,7 @@ import swal from 'sweetalert2';
 export class LoginComponent implements OnInit{
     loginForm!:FormGroup;
     isSubmitted = false;
-    constructor(private fb:FormBuilder, private router: Router){}    
+    constructor(private fb:FormBuilder, private router: Router, private http:UsuarioService){}    
 
     ngOnInit():void{
        this.loginForm = this.fb.group({
@@ -27,23 +29,9 @@ export class LoginComponent implements OnInit{
 
    
 
-    // submit(){
-    //   this.isSubmitted = true;
-    //   if(this.loginForm.invalid) return;
-    //     swal.fire({
-    //       title: "Datos Validos",
-    //       text: `email: ${this.email?.value}\n
-    //             password: ${this.password?.value}]`,
-    //       icon: "success",
-    //       confirmButtonText: 'Aceptar'
-    //     });
-
-    // }
     submit(){
         if(this.loginForm.valid){
-          if(this.loginForm.controls['email'].value === "admin" && this.loginForm.controls['password'].value === "admin"){
-              this.router.navigateByUrl('admin');
-          }
+            this.http.consult_post("/admin/login", this.loginForm).pipe()
         }
     }
 }
