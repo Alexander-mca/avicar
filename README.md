@@ -6,7 +6,7 @@
 * MongoDB
 * Docker version 26
 
-## Requitos 
+## Requisitos 
 * npm
 * nodejs
 * docker
