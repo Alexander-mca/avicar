@@ -17,7 +17,7 @@
 Esta funcion del frontend nos sirve para registrar un usuario en la base
 de datos. Verifica que todos los datos esten correctos. 
 
-`
+~~~
 registrar(){
       if(this.form_registro.valid){
         if(this.form_registro.value.password === this.form_registro.value.confirm_password){
@@ -69,13 +69,14 @@ registrar(){
         console.log('Formulario incompleto');
       }
     }
-`
+~~~
 
 ### Submit
 Esta funcion se encarga de la verficación de los datos para
 que el usuario pueda ingresar a su cuenta
 
-`submit(){
+~~~
+submit(){
         if(this.loginForm.valid){
             console.log(this.loginForm.value);
             this.http.consult_post("/admin/login", this.loginForm.value).subscribe({
@@ -107,7 +108,8 @@ que el usuario pueda ingresar a su cuenta
                 }
             });
         }
-    }`
+    }
+~~~
 
 
 # **Manual de Usuario**
