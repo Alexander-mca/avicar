@@ -6,7 +6,7 @@
 * MongoDB
 * Docker version 26
 
-## Requisitos 
+## Requitos 
 * npm
 * nodejs
 * docker
@@ -75,8 +75,7 @@ registrar(){
 Esta funcion se encarga de la verficación de los datos para
 que el usuario pueda ingresar a su cuenta
 
-`
-        submit(){
+`submit(){
         if(this.loginForm.valid){
             console.log(this.loginForm.value);
             this.http.consult_post("/admin/login", this.loginForm.value).subscribe({
@@ -108,8 +107,8 @@ que el usuario pueda ingresar a su cuenta
                 }
             });
         }
-    }
-`
+    }`
+
 
 # **Manual de Usuario**
 
@@ -130,5 +129,4 @@ En caso de no tener cuenta, puede registrarse en el apartado de "Registrarse" en
 
 Solo debe llenar el formulario y estara registrado
 ![alt text](image-4.png)
-
 
